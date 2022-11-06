@@ -10,7 +10,7 @@
         <button>submit</button>
 
     </form>
-    <!-- <form action="http://localhost:3500/resdownload" method="get" style="display: none;" id="dow_form"> -->
+    <!-- <form action="https://patenpalapp.onrender.com/resdownload" method="get" style="display: none;" id="dow_form"> -->
         <form style="display: none;" id="dow_form">
         <button type="submit">Download Single File</button>
     </form>
@@ -67,14 +67,14 @@
         })
 
         const dowload = async () => {
-            const response = await fetch("http://localhost:3500/resdownload", { method: "GET" })
+            const response = await fetch("https://patenpalapp.onrender.com/resdownload", { method: "GET" })
             const json = await response.json();
             console.log(json);
         }
 
         form_down.addEventListener("submit", async (e) => {
             e.preventDefault();
-            form_down.setAttribute("action", "http://localhost:3500/resdownload");
+            form_down.setAttribute("action", "https://patenpalapp.onrender.com/resdownload");
             form_down.submit();
             // alert("file is download! and try other file");
             form.reset()
