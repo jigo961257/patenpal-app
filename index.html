@@ -31,7 +31,7 @@
                 formdata.append(myFile.item(key).name, myFile.item(key))
             })
 
-            const response = await fetch("http://localhost:3500/upload", {
+            const response = await fetch("https://patenpalapp.onrender.com/upload", {
                 method: "POST",
                 body: formdata,
             }).then(async (ans) => {
