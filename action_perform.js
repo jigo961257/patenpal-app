@@ -1,7 +1,8 @@
 const xlsAll = require("xlsx");
 const path = require("path");
 const puppeteer = require("puppeteer")
-const { unlink } = require("node:fs/promises")
+// const { unlink } = require("node:fs/promises")
+const fs = require("fs");
 
 
 const delay = ms => new Promise(
@@ -171,7 +172,7 @@ async function call_smaple_action() {
 function removeFile(filename) {
     (async function (path) {
         try {
-            await unlink(path);
+            await fs.unlinkSync(path);
             console.log(`successfully deleted ${path}`);
 
         } catch (error) {
